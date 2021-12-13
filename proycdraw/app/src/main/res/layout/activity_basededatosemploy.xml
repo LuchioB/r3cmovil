@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basededatosemploy">
+
+    <TextView
+        android:id="@+id/txttitleP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="@string/txttitleP"
+        app:layout_constraintEnd_toStartOf="@+id/txtpriceP"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <TextView
+        android:id="@+id/txttitleI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="204dp"
+        android:text="@string/txttitleI"
+        app:layout_constraintBottom_toBottomOf="@+id/txttitleN"
+        app:layout_constraintEnd_toStartOf="@+id/bdimag" />
+
+    <TextView
+        android:id="@+id/txttitleN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/txttitleN"
+        app:layout_constraintBottom_toTopOf="@+id/txttitleD"
+        app:layout_constraintEnd_toStartOf="@+id/txtnombreP" />
+
+    <TextView
+        android:id="@+id/txttitleD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/txttitleD"
+        app:layout_constraintBottom_toTopOf="@+id/txttitleP"
+        app:layout_constraintEnd_toStartOf="@+id/txtdescriptionP" />
+
+    <EditText
+        android:id="@+id/txtnombreP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/txttitleN"
+        app:layout_constraintTop_toBottomOf="@+id/txtcodigoP"
+        tools:layout_editor_absoluteX="127dp" />
+
+    <EditText
+        android:id="@+id/txtdescriptionP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:text="@string/txttitleD"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombreP"
+        tools:layout_editor_absoluteX="127dp" />
+
+    <EditText
+        android:id="@+id/txtpriceP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="@string/txttitleP"
+        app:layout_constraintTop_toBottomOf="@+id/txtdescriptionP"
+        tools:layout_editor_absoluteX="127dp" />
+
+    <ImageView
+        android:id="@+id/bdimag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ImageContrastCheck"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="32dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnselec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="btn"
+        app:layout_constraintStart_toEndOf="@+id/bdimag"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:onClick="Eliminar"
+        android:text="@string/btneliminar"
+        app:layout_constraintTop_toBottomOf="@+id/btnbuscar"
+        tools:layout_editor_absoluteX="258dp" />
+
+    <Button
+        android:id="@+id/btnactualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="98dp"
+        android:onClick="Actualizar"
+        android:text="@string/btnactualizar"
+        app:layout_constraintEnd_toStartOf="@+id/btneliminar"
+        app:layout_constraintTop_toBottomOf="@+id/btnregistro" />
+
+    <Button
+        android:id="@+id/btnregistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="98dp"
+        android:onClick="Registrar"
+        android:text="@string/btnregistro"
+        app:layout_constraintEnd_toStartOf="@+id/btnbuscar"
+        app:layout_constraintTop_toBottomOf="@+id/txtpriceP" />
+
+    <Button
+        android:id="@+id/btnbuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:onClick="Buscar"
+        android:text="@string/btnbuscar"
+        app:layout_constraintTop_toBottomOf="@+id/txtpriceP"
+        tools:layout_editor_absoluteX="258dp" />
+
+    <EditText
+        android:id="@+id/txtcodigoP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/bdimag"
+        tools:layout_editor_absoluteX="127dp"
+        tools:text="@string/txttitleC" />
+
+    <TextView
+        android:id="@+id/txttitleC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/txttitleC"
+        app:layout_constraintBottom_toTopOf="@+id/txttitleN"
+        app:layout_constraintEnd_toStartOf="@+id/txtcodigoP"
+        app:layout_constraintTop_toBottomOf="@+id/txttitleI"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
